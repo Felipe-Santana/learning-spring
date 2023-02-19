@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landon Hotel: Guests</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+  <h1 class="title">Guests</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Last name</th>
+        <th>First name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="guest: ${guests}">
+        <td th:text="${guest.lastName}">Guest last name</td>
+        <td th:text="${guest.firstName}">Guest first name</td>
+        <td th:text="${guest.emailAddress}">Guest email</td>
+        <td th:text="${guest.phoneNumber}">Guest phone</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
